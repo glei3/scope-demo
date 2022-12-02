@@ -25,15 +25,8 @@ let funcTimer = (time, func) =>{
 }
 
 
-let funcTimer = (time, cb) => {
-  global.setTimeout(cb, time);
-}
 
-function partyFunc() {
-  console.log("Party time!");
-}
 
-funcTimer(5000, partyFunc); // in 5 seconds prints: "Party time!"
 
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
