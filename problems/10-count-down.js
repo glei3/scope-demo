@@ -29,7 +29,31 @@ Example 4:
 ***********************************************************************/
 
 // Your code here
+let countDownTimer = num => {
+  if (num === 0) {
+    return "Happy New Year!";
+  }
+  return function counter() {
+    num--;
+    if (num === 0) {
+      return 'Happy New Year!';
+    } else {
+      return counter;
+    }
+  }
 
+}
+
+//Example 3:
+let twoDays = countDownTimer(2); // returns a function
+console.log(twoDays()); // returns a function
+console.log(twoDays()); // prints "Happy New Year!"
+
+//Example 4:
+let threeDays = countDownTimer(3); // returns a function
+console.log(threeDays()); // returns a function
+console.log(threeDays()); // returns a function
+console.log(threeDays()); // prints "Happy New Year!"
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
 try {
