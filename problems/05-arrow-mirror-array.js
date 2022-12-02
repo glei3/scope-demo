@@ -10,7 +10,18 @@ arrowMirrorArray([1,2,3]); // => [ 1, 2, 3, 3, 2, 1 ]
 arrowMirrorArray(['a', 'b', 'c', 'd']); // => [ 'a', 'b', 'c', 'd', 'd', 'c', 'b', 'a' ]
 ***********************************************************************/
 
-// Your code here
+let arrowMirrorArray = arr =>{
+newArr = []
+for (let nums of arr){
+newArr.push(nums)
+
+
+}
+for (let i = arr.length -1; i>=0;i--){
+  newArr.push(arr[i])
+}
+return newArr;
+}
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
