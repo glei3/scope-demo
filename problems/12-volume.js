@@ -15,6 +15,33 @@ function returned by recVolume should continue to return the original volume.
 
 // Your code here
 
+let recVolume = height => {
+  let count = 1
+  let v = height;
+  return function volume(num) {
+    if (count < 3) {
+      v *= num;
+      count++;
+      if (count >= 3) {
+        return v;
+      }
+      return volume;
+    } else {
+      return v;
+    }
+  }
+}
+
+let table1 = recVolume(5);
+table1(4);
+table1(3);
+table1(145);
+
+//let table2 = recVolume(3);
+//table2(2);
+//table2(1)
+//table2(76)
+
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
 try {

@@ -22,16 +22,18 @@ AFTER YOU ARE FINISHED WITH THIS PROBLEM, ASK FOR A CODE REVIEW
   fat-arrow function
 ***********************************************************************/
 
-let lazyAdder = firstNum =>{
-  return function(secondNum){
-return function(thirdNum){
-  return (firstNum + secondNum +thirdNum)
-}
-
+let lazyAdder = firstNum => {
+  return function (secondNum) {
+    return function (thirdNum) {
+      return (firstNum + secondNum + thirdNum)
+    }
   }
-
 }
 
+let func1 = lazyAdder(10);
+let func2 = func1(20);
+let total = func2(3);
+console.log(total);
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
 try {
